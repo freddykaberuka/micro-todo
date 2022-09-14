@@ -27,7 +27,8 @@ handleSubmit = e => {
         <input type="text" placeholder="Add Todo..." 
         value={this.state.title} 
         name="title"
-        onChange={this.onChange}/>
+        onChange={this.onChange}
+        className="inputTodo"/>
         <button className="input-submit"><FaPlusCircle style={{ color: "darkcyan", fontSize: "20px", marginTop: "2px" }}/></button>
       </form>
     )

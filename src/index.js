@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import TodoContainer from './components/TodoContainer';
 // style sheet
 import './App.css'
+// import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <Router>
     <TodoContainer/>
+    </Router>
   </React.StrictMode>
 );
 

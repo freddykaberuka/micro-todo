@@ -3,6 +3,9 @@ import Header from './Header';
 import InputTodo from './InputTodo';
 import TodosList from './TodosList';
 import { v4 as uuidv4 } from 'uuid';
+import About from "../pages/About"
+import NotMatch from "../pages/NotMatch"
+import Navbar from "./Navbar"
 
 export default class TodoContainer extends React.Component {
   state = {
@@ -80,11 +83,6 @@ componentDidUpdate(prevProps, prevState) {
             />
             </div>
         </div>
-    //   <ul>
-    //   {this.state.todos.map(todo => (
-    //     <li>{todo.title}</li>
-    //   ))}
-    // </ul>
     )
   }
 }
