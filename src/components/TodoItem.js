@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import styles from "./TodoItem.module.css"
+import { FaTrash } from "react-icons/fa"
 
 function TodoItem(props) {
 const completedStyle = {
@@ -35,7 +36,7 @@ useEffect(()=>{
           <div onDoubleClick = {handleEditing} style={viewMode}>
           <input type="checkbox" checked={completed} onChange={() => props.handleChangeProps(id)}
           className={styles.checkbox}/>
-          <button onClick = {()=>props.deleteTodoProps(id)}>Delete</button> <span style={completed ? completedStyle : null}>{title}</span>
+          <button onClick = {()=>props.deleteTodoProps(id)}><FaTrash style={{ color: "orangered", fontSize: "16px" }}/></button> <span style={completed ? completedStyle : null}>{title}</span>
           </div>
           <input type="text" className={styles.textInput} style={editMode} value={title} onChange={e => {
             props.setUpdate(e.target.value, id)
