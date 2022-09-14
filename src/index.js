@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TodoContainer from './components/TodoContainer';
+// style sheet
+import './App.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
