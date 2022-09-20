@@ -1,18 +1,23 @@
-import React, { Component } from 'react'
-import TodoItem from './TodoItem'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import TodoItem from './TodoItem';
 
-export default class TodosList extends Component {
-  render() {
-    return (
-      <ul>
-        {this.props.todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} 
-          handleChangeProps={this.props.handleChangeProps}
-          deleteTodoProps ={this.props.deleteTodoProps}
-          setUpdate={this.props.setUpdate}
-          />
-        ))}
-      </ul>
-    )
-  }
-}
+const TodosList = (props) => {
+  const {
+    todos, handleChangeProps, deleteTodoProps, setUpdate,
+  } = props;
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          handleChangeProps={handleChangeProps}
+          deleteTodoProps={deleteTodoProps}
+          setUpdate={setUpdate}
+        />
+      ))}
+    </ul>
+  );
+};
+export default TodosList;
